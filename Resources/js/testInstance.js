@@ -1,6 +1,8 @@
 $(function() {
 	// $('#app_picture').attr('src', '../images/JoeChao.jpg');
 	var testImageCollection = new TestImageCollection();
+	
+	var test = new TestInstance({ subject: {name: "Joe Chao"}});
 
 	var sql = "SELECT * from words";
 	var res = Phonology.DB.execute(sql);
@@ -58,12 +60,18 @@ $(function() {
 	
 	function nextPicture() {
 		counter += 1;
-		if (counter > imageLimit) {
+		var production = $("#app_word_input").val();
+		test.addProduction({word: image.get('word'), production: production});
+		
+		if (counter === imageLimit) {
 			counter -= 1;
 			alert("You've reached the end!!!!1");
+			alert(_.pluck(test.get('productions'), 'production'));
 		}
 		
-		$("#app_word_input").val('');
+		
+		
+		$("#app_word_input").val('')
 		
 		image = testImageCollection.at(counter);
 	

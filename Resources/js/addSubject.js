@@ -12,9 +12,7 @@ $(function() {
 		var clinician_name = $('#clinician_name').val();
 		
 		var sql = "INSERT INTO subjects(fname, lname, gender, birthday, clinician_name, parent_name, school, teacher, grade) VALUES('"+ fname+"', '"+ lname +"', '"+ gender +"', '"+ birthday +"', '"+ clinician_name +"', '"+ parent_name +"', '"+ school +"', '"+ teacher +"', '"+ grade +"')";
-		alert(sql);
 		var results = Phonology.DB.execute(sql);
-		alert(results);
 
 		// window.history.back();
 	});
