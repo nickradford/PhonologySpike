@@ -34,6 +34,16 @@ $(function() {
 	$("#app_close").click(function() {
 		window.close();
 	});
+	$(".pdf").click(function() {
+		var doc = new pdf();
+		doc.setFontSize(48);
+		doc.text(20, 20, 'Phonology');
+    	var fileName = "testFile"+new Date().getSeconds()+".pdf";
+		var dataUri = doc.output('datauri', {"fileName":fileName});
+    	//$('#pdfViewer').append('<object width="425" height="550" data="'+dataUri+'" type="application/pdf"></object>');
+    	document.location = dataUri;
+
+	})
 	
 	
 	$('#ti_platform').html(tiPlatform);

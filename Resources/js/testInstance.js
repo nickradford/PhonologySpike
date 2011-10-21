@@ -73,9 +73,8 @@ $(function() {
 		test.addProduction({name: image.get('name'), production: production});
 		
 		if (counter === imageLimit) {
-			counter -= 1;
-			alert("You've reached the end!!!!1");
-			alert(_.pluck(test.get('productions'), 'production'));
+			alert('test finished');
+			test.finish();
 		}
 		
 		image = testImageCollection.at(counter);

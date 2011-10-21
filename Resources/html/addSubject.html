@@ -1,35 +1,65 @@
 <h2>Add Subject</h2>
 <form id='add_subject_form'>
-	<p>
-		<label>First Name<input id='fname' /></label>
-	</p>
-	<p>
-		<label>Last Name<input id='lname' /></label>
-	</p>
-	<p>
-		<label>Gender<input id='gender' /></label>
-	</p>
-	<p>
-		<label>Birthday<input id='birthday' /></label>
-	</p>
-	<p>
-		<label>Clinician Name<input id='clinician_name' /></label>
-	</p>
-	<p>
-		<label>Parent Name<input id='parent_name' /></label>
-	</p>
-	<p>
-		<label>School<input id='school' /></label>
-	</p>
-	<p>
-		<label>Teacher<input id='teacher' /></label>
-	</p>
-	<p>
-		<label>Grade<input id='grade' /></label>
-	</p>
+	<div class='left'>
+		<p>
+			<label>First Name<input id='fname' /></label>
+		</p>
+		<p>
+			<label>Last Name<input id='lname' /></label>
+		</p>
+		<p>
+			<label>Gender<input id='gender' /></label>
+		</p>
+		<p>
+			<label>Birthday<input id='birthday' /></label>
+		</p>
+		<p>
+			<label>Clinician Name<input id='clinician_name' /></label>
+		</p>
+	</div>
+	<div class='right'>
 
-	<p>
-		<input type='submit' value='submit'/>
-	</p>
+		<p>
+			<label>Parent Name<input id='parent_name' /></label>
+		</p>
+		<p>
+			<label>School<input id='school' /></label>
+		</p>
+		<p>
+			<label>Teacher<input id='teacher' /></label>
+		</p>
+		<p>
+			<label>Grade<input id='grade' /></label>
+		</p>
+	</div>	
+	<div class='clear'>
+		<p>
+			<input type='submit' value='submit'/>
+		</p>
+	</div>
 </form>
-<script src='js/addSubject.js'></script>		
+<script src='js/addSubject.js'></script>	
+<style>
+	form#add_subject_form {
+		width: 450px;
+	}
+	label{
+		width: 150px;
+		display: inline-block;
+	}
+	div.left {
+		float: left;
+	}
+	div.right {
+		float: right;
+	}
+	div.clear {
+		clear: both;
+	}
+	input {
+		font-size: 24px;
+		background: #FFF5C6;
+		font-family: Papyrus;
+	}
+
+</style>	

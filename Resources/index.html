@@ -13,6 +13,10 @@
 			header {
 				font-size: 64px;
 			}
+			header:hover {
+				text-decoration: underline;
+				cursor: pointer;
+			}
 			footer {
 				position: absolute;
 				bottom: 4px;
@@ -25,6 +29,7 @@
 		<script src="lib/js/jquery.min.js"></script>
 		<script src="lib/js/underscore.js"></script>
 		<script src="lib/js/backbone.js"></script>
+		<script src="lib/js/pdf.js"></script>
 		<script src="js/db.js"></script>
 		<script src="js/subjects.backbone.js"></script>
 		<script src="js/phonemes.backbone.js"></script>
@@ -48,7 +53,9 @@
 				</table>
 				<button id='app_add_subject'>Add Subject</button>
 				<button class='app_phoneme_list'>List Phonemes</button>
+				<button class='pdf'>PDF</button>
 			</div>
+			<div id='pdfViewer' style="float: right;"></div>
 			
 			<footer>&copy; 2011 Phonology Chao – Compiled for <span id='ti_platform'></span> – Version <span id='app_version'></span> – <button id='app_close'>Close</button></footer>
 		</div>

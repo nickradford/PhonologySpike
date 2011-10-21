@@ -17,6 +17,13 @@ $(function() {
 			
 			var production = _.detect(prodArr, function(item) { return item.name === word });
 			return production;
+		},
+		finish: function() {
+			this.save();
+			window.location = '../index.html';
+		},
+		save: function() {
+			//saves this test to the database
 		}
 	});
 	
