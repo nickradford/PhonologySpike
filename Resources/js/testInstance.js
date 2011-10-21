@@ -29,9 +29,14 @@ $(function() {
 		if (counter < 0) {
 			counter += 1;
 		}
-
+		
 		image = testImageCollection.at(counter);
-	
+
+		var name = image.get('name');
+		var production = test.getProduction(name);
+		
+		$("#app_word_input").val(production.production)
+		
 		imageView.model = image;
 		imageView.render()
 	});
@@ -59,9 +64,13 @@ $(function() {
 	});
 	
 	function nextPicture() {
-		counter += 1;
 		var production = $("#app_word_input").val();
-		test.addProduction({word: image.get('word'), production: production});
+		
+		if (production.length === 0)
+			return;
+			
+		counter += 1;
+		test.addProduction({name: image.get('name'), production: production});
 		
 		if (counter === imageLimit) {
 			counter -= 1;
@@ -69,11 +78,14 @@ $(function() {
 			alert(_.pluck(test.get('productions'), 'production'));
 		}
 		
-		
+		image = testImageCollection.at(counter);
+
+		var name = image.get('name');
+		var production = test.getProduction(name);
 		
 		$("#app_word_input").val('')
-		
-		image = testImageCollection.at(counter);
+		if (production && production.production)
+			$("#app_word_input").val(production.production);		
 	
 		imageView.model = image;
 		imageView.render();

@@ -11,6 +11,12 @@ $(function() {
 			var prodArr = this.get('productions');
 			prodArr.push(obj);
 			this.set({ productions: prodArr });
+		},
+		getProduction: function(word) {
+			var prodArr = this.get('productions');
+			
+			var production = _.detect(prodArr, function(item) { return item.name === word });
+			return production;
 		}
 	});
 	

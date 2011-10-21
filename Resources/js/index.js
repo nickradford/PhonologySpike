@@ -9,7 +9,7 @@ $(function() {
 		appVersion = Ti.App.getVersion();
 		
 	// Handlers
-	$('#app_add_subject').click(function(e) {
+	$('#app_add_subject').click(function() {
 		$.get('html/addSubject.html', function(data) {
 			$('#main').html(data);
 		});
@@ -25,6 +25,14 @@ $(function() {
 		$.get('html/testPhonemes.html', function(data) {
 			$('#main').html(data);
 		});
+	});
+	
+	$("#app_header").click(function() {
+		window.location = '../index.html';
+	});
+	
+	$("#app_close").click(function() {
+		window.close();
 	});
 	
 	
