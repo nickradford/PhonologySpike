@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<style>
+			body {
+				background: #FFE4B5;
+				font-family: Papyrus;
+			}
+			#container {
+				width: 1024px;
+				margin: 0 auto;
+				padding: 0 ;
+			}
+			header {
+				font-size: 64px;
+			}
+			footer {
+				position: absolute;
+				bottom: 4px;
+				text-align: center;
+			}
+			table {
+				background: #FFF5C6;
+			}
+		</style>
+		<script src="lib/js/jquery.min.js"></script>
+		<script src="lib/js/underscore.js"></script>
+		<script src="lib/js/backbone.js"></script>
+		<script src="js/db.js"></script>
+		<script src="js/subjects.backbone.js"></script>
+		<script src="js/phonemes.backbone.js"></script>
+		<script src="js/index.js"></script>
+		<title>Phonology Spike</title>
+	</head>
+	<body>
+		<div id='container'>
+			<header>Phonology</header>
+			
+			<div id='main'>
+				<h2>Subjects</h2>
+				<table summary='The list of all subjects in the app.'>
+					<tr>
+							<th>Name</th>
+							<th>Gender</th>
+							<th></th>
+					</tr>
+					<tbody id='app_subjects'>
+					</tbody>
+				</table>
+				<button id='app_add_subject'>Add Subject</button>
+				<button class='app_phoneme_list'>List Phonemes</button>
+			</div>
+			
+			<footer>&copy; 2011 Phonology Chao – Compiled for <span id='ti_platform'></span> – Version <span id='app_version'></span></footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <guid>60e3e3ee-06a2-4800-8c8f-58c1513da5b1</guid>
+    <!-- These values are edited/maintained by Titanium Developer -->
+    <id>com.bgsu.phonology</id>
+    <name>PhonologySpike</name>
+    <version>1.0</version>
+    <publisher>Phonology - Chao</publisher>
+    <url>http://</url>
+    <description>not specified</description>
+    <icon>default_app_logo.png</icon>
+    <copyright>2011 by Phonology - Chao</copyright>
+    <!-- Window Definition - these values can be edited -->
+    <window>
+        <id>initial</id>
+        <title>Phonology</title>
+        <url>app://index.html</url>
+        <width>1024</width>
+        <max-width>3000</max-width>
+        <min-width>1024</min-width>
+        <height>768</height>
+        <max-height>3000</max-height>
+        <min-height>768</min-height>
+        <fullscreen>true</fullscreen>
+        <resizable>true</resizable>
+        <chrome scrollbars="false">false</chrome>
+        <maximizable>true</maximizable>
+        <minimizable>true</minimizable>
+        <closeable>true</closeable>
+    </window>
+</ti:app>
