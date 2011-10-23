@@ -15,7 +15,7 @@ $(function() {
 	}
 	imageLimit = testImageCollection.length;
 		
-	counter = 0;
+	counter = 28;
 	image = testImageCollection.at(counter);
 	
 	imageView = new TestImageView({

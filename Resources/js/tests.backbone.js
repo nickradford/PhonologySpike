@@ -24,6 +24,7 @@ $(function() {
 		},
 		save: function() {
 			//saves this test to the database
+			alert(_.pluck(this.get('productions'), 'production'));
 		}
 	});
 	

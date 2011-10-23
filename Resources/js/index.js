@@ -34,6 +34,7 @@ $(function() {
 	$("#app_close").click(function() {
 		window.close();
 	});
+	
 	$(".pdf").click(function() {
 		var doc = new pdf();
 		doc.setFontSize(48);
@@ -58,6 +59,7 @@ $(function() {
         childViewTagName     : 'tr',
         el                   : $('tbody#app_subjects')[0]
     });
+    
 	subjectsCollectionView.render();
 	
 });
